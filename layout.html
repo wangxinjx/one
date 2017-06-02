@@ -3,288 +3,120 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="css/limitless.css"/>
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-		<link rel="stylesheet" href="css/reset.css" />
-		<style>
-		 
-		   header{
-		   	width:100%;
-		   	height: 45px;
-		   	line-height: 45px;
-		   	text-align: center;
-		   	color:#fff;
-		   	background:#00b38a;
-		   
-		   }
-		   section{
-		   	height:100%;
-		   	overflow:auto;
-		   }
-		   section .ad{
-		   	    width:100%;
-		   	   line-height: 43px;
-		   	   border-bottom: 1px solid #e8e8e8;
-		   	   position:relative;
-		   }
-		   .slh{
-		   	  text-overflow:ellipsis;
-		   	  white-space: nowrap;
-		   	  
-		   	    overflow: hidden;
-		   }
-		   section .ad span{
-		   	  display: block;
-		   	  height: 100%;
-		   	  padding:0 10px 0 10px;
-		   	 padding-right:200px;
-		   
-		   }
-		  section .ad a{
-		  	 display: block;
-		  	 position:absolute;
-		  	 right:10px;
-		  	 top:6px;
-		  	 background: #ccc;
-		  	 width:80px;
-		  	 height: 30px;
-		  	 line-height:30px;
-		  	 text-align: center;
-		  	 border-radius: 30px;
-		  	 color:#00b38a;
-		   
-		  }
-		  li{
-		  	  height:70px;
-		  	  padding:4px 20px 4px 4px;
-		  	  border-bottom: 1px solid #e8e8e8;
-		  }
-		  li img{
-		  	 width: 60px;
-		  	 margin-top: 5px;
-		  	 margin-right: 8px;
-		  }
-		  li p{
-		  	  width:100%;
-		  	  line-height: 25px;
-		  	  
-		  }
-		  footer{
-			position:fixed;
-			bottom:0;
-			width:100%;
-			height:20%;
-		}
-		footer div:first-child{
-			width:100%;
-			position:absolute;
-			top:-39%;
-			z-index:1;
-		}
-		footer div:first-child img{
-			width:35%;
-			height:35%;
-		}
-		.t{
-			width:100%;
-			height:45%;
-			background-color:rgba(0,0,0,0.6);
-			padding:5% 1%;
-			position:relative;
-		}
-		.t img:nth-child(1){
-			width:20%;
-			height:80%;
-		}
-		.t img:nth-child(2){
-			position:absolute;
-			top:20%;
-			left:60%
-			width:7%;
-			height:40%;
-		}
-		.t img:last-child{
-			margin:0 2%;
-			width:25%;
-			height:80%;
-		}
-		.t p{
-			width:50%;
-			height:100%;
-		}
-		.t p span{
-			font-size:200%;
-			color:#fff;
-		}
-		.b{
-			width:100%;
-			/*height:30%;*/
-			background-color:white;
-			
-			height: 7%;
-			position: fixed;
-			bottom: 0px;
-		}
-		.b ul{
-			width:100%;
-			height:100%;
-		}
-		.b ul li{
-			width:27%;
-			height:100%;
-			padding:2% 3%;
-			/*line-height:100%;*/
-			text-align:center;
-			color:#00b38a;
-			float:left;
-		}
-		.b ul li:nth-child(1){
-			background-color:#e7f3f0;
-			
-		}
-		</style>
+		<link rel="stylesheet" href="css/layout.css" />
 	</head>
 	<body>
-		   <header>
-				拉勾网
-		   </header>
-		   <section>
-		   	    <div class="ad">
-		   	    	 <span  class="slh">十分钟定制职位</span>
-		   	    	 <a href="#">去登陆</a>
-		   	    </div>
-		   	    <ul>
-		   	    	<li>		   	    		
-		   	    		<img src="img/t.png" alt="" class="fl_lt" />
-		   	    		<div class="detail">
-		   	    			 <h2>新浪微博</h2>
-		   	    			 <p><span>算法专家[北京]</span><span class="fl_rt">30-60k</span></p>
-		   	    			 <p>发布时间</p>
-		   	    		</div>
-		   	    	</li>
-		   	    	<li>		   	    		
-		   	    		<img src="img/t.png" alt="" class="fl_lt" />
-		   	    		<div class="detail">
-		   	    			 <h2>新浪微博</h2>
-		   	    			 <p><span>算法专家[北京]</span><span class="fl_rt">30-60k</span></p>
-		   	    			 <p>发布时间</p>
-		   	    		</div>
-		   	    	</li>
-		   	    	<li>		   	    		
-		   	    		<img src="img/t.png" alt="" class="fl_lt" />
-		   	    		<div class="detail">
-		   	    			 <h2>新浪微博</h2>
-		   	    			 <p><span>算法专家[北京]</span><span class="fl_rt">30-60k</span></p>
-		   	    			 <p>发布时间</p>
-		   	    		</div>
-		   	    	</li>
-		   	    	<li>		   	    		
-		   	    		<img src="img/t.png" alt="" class="fl_lt" />
-		   	    		<div class="detail">
-		   	    			 <h2>新浪微博</h2>
-		   	    			 <p><span>算法专家[北京]</span><span class="fl_rt">30-60k</span></p>
-		   	    			 <p>发布时间</p>
-		   	    		</div>
-		   	    	</li>
-		   	    	<li>		   	    		
-		   	    		<img src="img/t.png" alt="" class="fl_lt" />
-		   	    		<div class="detail">
-		   	    			 <h2>新浪微博</h2>
-		   	    			 <p><span>算法专家[北京]</span><span class="fl_rt">30-60k</span></p>
-		   	    			 <p>发布时间</p>
-		   	    		</div>
-		   	    	</li>
-		   	    	<li>		   	    		
-		   	    		<img src="img/t.png" alt="" class="fl_lt" />
-		   	    		<div class="detail">
-		   	    			 <h2>新浪微博</h2>
-		   	    			 <p><span>算法专家[北京]</span><span class="fl_rt">30-60k</span></p>
-		   	    			 <p>发布时间</p>
-		   	    		</div>
-		   	    	</li>
-		   	    	<li>		   	    		
-		   	    		<img src="img/t.png" alt="" class="fl_lt" />
-		   	    		<div class="detail">
-		   	    			 <h2>新浪微博</h2>
-		   	    			 <p><span>算法专家[北京]</span><span class="fl_rt">30-60k</span></p>
-		   	    			 <p>发布时间</p>
-		   	    		</div>
-		   	    	</li>
-		   	    	<li>		   	    		
-		   	    		<img src="img/t.png" alt="" class="fl_lt" />
-		   	    		<div class="detail">
-		   	    			 <h2>新浪微博</h2>
-		   	    			 <p><span>算法专家[北京]</span><span class="fl_rt">30-60k</span></p>
-		   	    			 <p>发布时间</p>
-		   	    		</div>
-		   	    	</li>
-		   	    	<li>		   	    		
-		   	    		<img src="img/t.png" alt="" class="fl_lt" />
-		   	    		<div class="detail">
-		   	    			 <h2>新浪微博</h2>
-		   	    			 <p><span>算法专家[北京]</span><span class="fl_rt">30-60k</span></p>
-		   	    			 <p>发布时间</p>
-		   	    		</div>
-		   	    	</li>
-		   	    	<li>		   	    		
-		   	    		<img src="img/t.png" alt="" class="fl_lt" />
-		   	    		<div class="detail">
-		   	    			 <h2>新浪微博</h2>
-		   	    			 <p><span>算法专家[北京]</span><span class="fl_rt">30-60k</span></p>
-		   	    			 <p>发布时间</p>
-		   	    		</div>
-		   	    	</li>
-		   	    	<li>		   	    		
-		   	    		<img src="img/t.png" alt="" class="fl_lt" />
-		   	    		<div class="detail">
-		   	    			 <h2>新浪微博</h2>
-		   	    			 <p><span>算法专家[北京]</span><span class="fl_rt">30-60k</span></p>
-		   	    			 <p>发布时间</p>
-		   	    		</div>
-		   	    	</li>
-		   	    	<li>		   	    		
-		   	    		<img src="img/t.png" alt="" class="fl_lt" />
-		   	    		<div class="detail">
-		   	    			 <h2>新浪微博</h2>
-		   	    			 <p><span>算法专家[北京]</span><span class="fl_rt">30-60k</span></p>
-		   	    			 <p>发布时间</p>
-		   	    		</div>
-		   	    	</li>
-		   	    	<li>		   	    		
-		   	    		<img src="img/t.png" alt="" class="fl_lt" />
-		   	    		<div class="detail">
-		   	    			 <h2>新浪微博</h2>
-		   	    			 <p><span>算法专家[北京]</span><span class="fl_rt">30-60k</span></p>
-		   	    			 <p>发布时间</p>
-		   	    		</div>
-		   	    	</li>
-		   	    	<li>		   	    		
-		   	    		<img src="img/t.png" alt="" class="fl_lt" />
-		   	    		<div class="detail">
-		   	    			 <h2>新浪微博</h2>
-		   	    			 <p><span>算法专家[北京]</span><span class="fl_rt">30-60k</span></p>
-		   	    			 <p>发布时间</p>
-		   	    		</div>
-		   	    	</li>
-		   	    </ul>
-		   </section>
-		   
-		   <footer>
-			   	<div>
-			   		<img src="img/download_mascot.png" class="fl_rt"/>
-			   	</div>
-				<div class="t">
-					<img src="img/download_logo_new.png" class="fl_lt" />
-					<img src="img/download_txt_new.png" >
-					<img src="img/download_btn_new.png" class="fl_rt" />
-				</div>
-				<div class="b">
-					<ul>
-						<li>职位</li>
-						<li>搜索</li>
-						<li>我的</li>
-					</ul>
-				</div>
+		<div class="container">
+			<header>
+				header
+			</header>
+			<section>
+				<ul>
+					<li>001</li>
+					<li>002</li>
+					<li>003</li>
+					<li>004</li>
+					<li>005</li>
+					<li>006</li>
+					<li>007</li>
+					<li>008</li>
+					<li>009</li>
+					<li>010</li>
+					<li>011</li>
+					<li>012</li>
+					<li>013</li>
+					<li>014</li>
+					<li>015</li>
+					<li>016</li>
+					<li>017</li>
+					<li>018</li>
+					<li>019</li>
+					<li>020</li>
+					<li>021</li>
+					<li>022</li>
+					<li>023</li>
+					<li>024</li>
+					<li>025</li>
+					<li>026</li>
+					<li>027</li>
+					<li>028</li>
+					<li>029</li>
+					<li>030</li>
+					<li>031</li>
+					<li>032</li>
+					<li>033</li>
+					<li>034</li>
+					<li>035</li>
+					<li>036</li>
+					<li>037</li>
+					<li>038</li>
+					<li>039</li>
+					<li>040</li>
+					<li>041</li>
+					<li>042</li>
+					<li>043</li>
+					<li>044</li>
+					<li>045</li>
+					<li>046</li>
+					<li>047</li>
+					<li>048</li>
+					<li>049</li>
+					<li>050</li>
+					<li>051</li>
+					<li>052</li>
+					<li>053</li>
+					<li>054</li>
+					<li>055</li>
+					<li>056</li>
+					<li>057</li>
+					<li>058</li>
+					<li>059</li>
+					<li>060</li>
+					<li>061</li>
+					<li>062</li>
+					<li>063</li>
+					<li>064</li>
+					<li>065</li>
+					<li>066</li>
+					<li>067</li>
+					<li>068</li>
+					<li>069</li>
+					<li>070</li>
+					<li>071</li>
+					<li>072</li>
+					<li>073</li>
+					<li>074</li>
+					<li>075</li>
+					<li>076</li>
+					<li>077</li>
+					<li>078</li>
+					<li>079</li>
+					<li>080</li>
+					<li>081</li>
+					<li>082</li>
+					<li>083</li>
+					<li>084</li>
+					<li>085</li>
+					<li>086</li>
+					<li>087</li>
+					<li>088</li>
+					<li>089</li>
+					<li>090</li>
+					<li>091</li>
+					<li>092</li>
+					<li>093</li>
+					<li>094</li>
+					<li>095</li>
+					<li>096</li>
+					<li>097</li>
+					<li>098</li>
+					<li>099</li>
+					<li>100</li>
+				</ul>
+			</section>
+			<footer>
+				footer
 			</footer>
+		</div>
 	</body>
 </html>
