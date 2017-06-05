@@ -166,10 +166,11 @@
 			})
 			function a(index){
 				timer=setInterval(function(){
+					lis1[index].style.background="#4998E7";
 					if(list.offsetLeft>-w){
 						list.style.left=list.offsetLeft-10+"px";	
 						setInterval(function(){
-							lis1[index].style.background="#4998E7";
+//							lis1[index].style.background="#4998E7";
 							if(index==0){
 								lis1[index].style.backgroundColor="rgba(255,255,255,0.3)";
 								index++;
@@ -216,13 +217,16 @@
 				this.style.left=n*w+"px";
 				if(n==0){
 					lis1[n].style.background="#4998E7";
-					lis1[n+1].style.background="rgba(255,255,255,0.3)";
+					index=n;
+//					lis1[n+1].style.background="rgba(255,255,255,0.3)";
 				}
 				else{
-					lis1[n].style.background="#4998E7";
-					lis1[n-1].style.background="rgba(255,255,255,0.3)";
+					lis1[-n].style.background="#4998E7";
+					index=-n;
+//					lis1[n+1].style.background="rgba(255,255,255,0.3)";
 				}
-				index=n;
+				lis1[n+1].style.background="rgba(255,255,255,0.3)";
+				
 				a(index);
 			})
 		</script>
