@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<style>
+			#d{
+				width:300px;
+				height:300px;
+				background:#def;
+				position:absolute;
+				top:0;
+				opacity:0.5
+			}
+		</style>
+	</head>
+	<body>
+		<a href="http://www.baidu.com">baidu</a>
+		<div id="d">abc</div>
+		<script>
+			var d=document.querySelector("#d");
+			d.addEventListener("click",function(){
+				console.log("click");
+			})
+			d.addEventListener("touchstart",function(){
+				console.log("touchstart");
+			})
+			d.addEventListener("touchmove",function(ev){
+				this.innerHTML=ev.touches.length;
+			})
+			d.addEventListener("touchend",function(){
+				this.style.display="none";
+			})
+			d.addEventListener("touchstart",function(ev){
+				ev.preventDefault();
+			})
+		</script>
+	</body>
+</html>
