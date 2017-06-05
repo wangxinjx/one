@@ -4,6 +4,9 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<script>
+			document.documentElement.style.fontSize=innerWidth/16+"px";
+		</script>
 		<style>
 			html,body{
 				width:100%;
@@ -21,19 +24,23 @@
 				position:relative;
 			}
 			ul{
-				width:200%;
+				width:300%;
 				height:300px;
 				position:absolute;
+				left:0;top:0;
 			}
 			li{
 				float:left;
-				width:50%;
+				width:20rem;
 				height:300px;
 			}
-			li:first-child{
+			li:nth-child(3n+1){
 				background:#def;
 			}
-			li:last-child{
+			li:nth-child(3n+2){
+				background:#abcdef;
+			}
+			li:nth-child(3n){
 				background:#edf;
 			}
 		</style>
@@ -43,21 +50,36 @@
 			<ul id="b">
 				<li>111</li>
 				<li>222</li>
+				<li>333</li>
 			</ul>
 		</div>
 		<script>
 			var a=document.getElementById("a");
-			var b=document.getElementById("b");
-			var lis=document.getElementsByTagName("li");
-			var disx;
-			var leftyd;
-			var w=lis[0].clientWidth;
-			console.log(w);
 			a.addEventListener("touchstart",function(ev){
 				ev.preventDefault();
 			})
+			var b=document.getElementById("b");
+			var lis=document.getElementsByTagName("li");
+			var olen=lis.length;
+			console.log(olen);
+			var disx;
+			var leftyd;
+			var w=lis[0].clientWidth;
+			b.innerHTML+=b.innerHTML;
+			var len=b.children.length;
+			console.log(len);
+			b.style.width=w*len+"px";
 			b.addEventListener("touchstart",function(ev){
 				disx=ev.changedTouches[0].pageX;
+				var n=Math.round(this.offsetLeft/w);
+				if(n==0){
+					num=olen;
+					this.style.left=-num*w+"px";
+				}
+				if(-n==len-1){
+					num=olen-1;
+					this.style.left=-num*w+"px";
+				}
 				leftyd=this.offsetLeft;
 			})
 			b.addEventListener("touchmove",function(ev){
