@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<style>
+			html,body{
+				width:100%;
+				height:100%;
+				margin:0;
+			}
+			ul{
+				list-style:none;
+				margin:0;
+				padding:0;
+			}
+			div{
+				width:100%;
+				height:300px;
+				position:relative;
+			}
+			ul{
+				width:200%;
+				height:300px;
+				position:absolute;
+			}
+			li{
+				float:left;
+				width:50%;
+				height:300px;
+			}
+			li:first-child{
+				background:#def;
+			}
+			li:last-child{
+				background:#edf;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="a">
+			<ul id="b">
+				<li>111</li>
+				<li>222</li>
+			</ul>
+		</div>
+		<script>
+			var a=document.getElementById("a");
+			var b=document.getElementById("b");
+			var lis=document.getElementsByTagName("li");
+			var disx;
+			var leftyd;
+			var w=lis[0].clientWidth;
+			console.log(w);
+			a.addEventListener("touchstart",function(ev){
+				ev.preventDefault();
+			})
+			b.addEventListener("touchstart",function(ev){
+				disx=ev.changedTouches[0].pageX;
+				leftyd=this.offsetLeft;
+			})
+			b.addEventListener("touchmove",function(ev){
+				this.style.left=(ev.changedTouches[0].pageX-disx)+leftyd+"px";
+			})
+			b.addEventListener("touchend",function(){
+				var n=Math.round(this.offsetLeft/w);
+				console.log(n);
+				this.style.left=n*w+"px";
+			})
+		</script>
+	</body>
+</html>
