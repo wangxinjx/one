@@ -4,72 +4,227 @@
 		<meta charset="utf-8" />
 		<title></title>
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+		<link rel="stylesheet" href="bs/css/bootstrap.css" />
 		<link rel="stylesheet" href="css/index.css" />
+		<script src="js/jquery-1.11.1.js"></script>
+		<style>
+			.active{
+				background:#4998E7;
+			}
+			.lp{
+				background:rgba(255,255,255,0.3);
+			}
+		</style>
 		<script>
 			document.getElementsByTagName("html")[0].style.fontSize=innerWidth/16+"px";
+//			$(function(){
+//				$(".show ul li").eq(0).addClass("on").siblings().removeClass("on");
+//				var index=0;
+//				var w=$(".show").outerWidth();
+//				setInterval(function(){
+//						index++;
+//						if(index==2){
+//							index=0;
+//						}
+//						$(".show ul li").eq(index).addClass("on").siblings().removeClass("on");
+//						$(".cont").stop().animate({left:-w*index+"px"},2000);	
+//				},3000)
+//			})
 		</script>
 	</head>
 	<body>
-		<header>
-			<div><img src="img/icon_left.png" alt="" /></div>
-			<span>远程酒业</span>
-			<div><img src="img/icon_right.png" alt="" /></div>
-		</header>
-		<nav>
-			<ul>
-				<li>资讯</li>
-				<li>产品</li>
-				<li>实战</li>
-				<li>讨论</li>
-			</ul>
-		</nav>
-		<section>
-			<ul>
-				<li>
-					<img src="img/a.gif" alt="" />
-					<div>
-						<h3>酒名字</h3>
-						<p>提升白酒等传统酒类生产机械化的水平成为行内未来研究工作的重点，从而促进酿酒装备与技术的快速发展...</p>
-					</div>
-				</li>
-				<li>
-					<img src="img/a.gif" alt="" />
-					<div>
-						<h3>酒名字</h3>
-						<p>提升白酒等传统酒类生产机械化的水平成为行内未来研究工作的重点，从而促进酿酒装备与技术的快速发展...</p>
-					</div>
-				</li>
-				<li>
-					<img src="img/a.gif" alt="" />
-					<div>
-						<h3>酒名字</h3>
-						<p>提升白酒等传统酒类生产机械化的水平成为行内未来研究工作的重点，从而促进酿酒装备与技术的快速发展...</p>
-					</div>
-				</li>
-				<li>
-					<img src="img/a.gif" alt="" />
-					<div>
-						<h3>酒名字</h3>
-						<p>提升白酒等传统酒类生产机械化的水平成为行内未来研究工作的重点，从而促进酿酒装备与技术的快速发展...</p>
-					</div>
-				</li>
-			</ul>
-		</section>
-		<footer>
-			<ul>
-				<li>
-					<div><img src="img/icon_book.png" alt="" /><p>资讯</p></div>
-				</li>
-				<li>
-					<div><img src="img/icon_tag.png" alt="" /><p>产品</p></div>
-				</li>
-				<li>
-					<div><img src="img/icon_person.png" alt="" /><p>实战</p></div>
-				</li>
-				<li>
-					<div><img src="img/icon_more.png" alt="" /><p>讨论</p></div>
-				</li>
-			</ul>
-		</footer>
+		<div class="container">
+			<header>
+				<img src="http://mat1.gtimg.com/www/mobi/image/logo.png" alt="" />
+				<span>登录</span>
+			</header>
+			<nav>
+				<ul>
+					<li>新闻</li>
+					<li>财经</li>
+					<li>娱乐</li>
+					<li>体育</li>
+					<li><p>更多<span>></span></p>
+					</li>
+					<li>军事</li>
+					<li>NBA</li>
+					<li>应用</li>
+					<li>科技</li>
+					<li>星座</li>
+				</ul>
+			</nav>
+			<div class="show" id="show">
+				<ul class="cont" id="list">
+					<li><img src="img/bo.jpg" alt="" /></li>
+					<li><img src="img/lun.jpg" alt="" /></li>
+				</ul>
+				<ul id="con">
+					<li class="lp"></li>
+					<li class="lp"></li>
+				</ul>
+			</div>
+			
+			<section>
+				<ul class="oneul">	
+					<li>
+						<strong>H5精选</strong>|
+						<span>端午微信刷屏小游戏</span>
+						
+					</li>
+					<li>
+						<h2>财经</h2>|
+						<span>印度铁路仰望中国 过去70年都做错了</span>
+					</li>
+					<li>
+						<h2>娱乐</h2>|
+						<span>印小天被曝遭妻子骗婚 损失千万至今无法见儿子</span>
+					</li>
+					<li>
+						<h2>体育</h2>|
+						<span>佩嫂T台秀惊艳全场 满屏大长腿吸眼球</span>
+					</li>
+					<li>
+						<h2>军事</h2>|
+						<span>大圆盘不见了：空警3000预警机长这样?</span>
+					</li>
+				</ul>
+				<span class="onespan">用	QQ登录，看个性化新闻<div>></div></span>
+				<div>
+					<div>新闻</div>
+					<div>社会</div>
+					<div>军事</div>
+				</div>
+				<div>
+					<img src="img/0 (2).jpg" alt="" />
+					<span>这件事，习近平和你一样一直努力着</span>
+				</div>
+				<ul class="twoul">
+					<li>
+						<div></div>
+						<span>第七个国家！马尔代夫政府宣布与卡塔尔断交</span>
+					</li>
+					<li>
+						<p>国航由香港飞成都飞机险撞山？官方回应</p>
+					</li>
+					<li>
+						<div></div>
+						<span>京东已逐步实现盈利背后有哪些因素？刘强东这样说</span>
+					</li>
+					<li>
+						<div></div>
+						<span>斯里兰卡遭洪灾 60万人无家可归</span>
+					</li>
+					<li>
+						<div></div>
+						<span>朴槿惠案证人指证：崔顺实说过三星的钱可以随便花</span>
+					</li>
+					<li>
+						<div></div>
+						<span>中国驻赞大使约见赞内政部长 敦促释放31名中国公民</span>
+					</li>
+					<li>
+						<div></div>
+						<span>那些加分考入清华的寒门子弟，生活中改变了什么？</span>
+					</li>
+					<li>
+						<div></div>
+						<span>今日热播专辑</span>
+					</li>
+				</ul>
+				<span class="twospan">进入新闻频道<div>></div></span>
+			</section>
+			<img src="img/40956233.png" alt="" />
+			<footer>
+				<div></div>
+				<span>
+					<p>腾讯新闻客户端</p>
+					<p>看更多精彩资讯</p>
+				</span>
+				<span>
+					打开
+				</span>
+				<p>×</p>
+			</footer>
+		</div>
+		<script>
+			var show=document.getElementById("show");
+			var list=document.getElementById("list");
+			var lis=list.getElementsByTagName("li");
+			var con=document.getElementById("con");
+			var lis1=con.getElementsByTagName("li");
+			var w=lis[0].clientWidth;
+			var disx;
+			var leftyd=0;
+			var ux;
+			var timer;
+			var index=0;
+			var speed=0;
+			console.log(lis1[0].className);
+			lis1[0].style.backgroundColor="#4998E7";
+			show.addEventListener("touchstart",function(ev){
+				ev.preventDefault();
+			})
+			function a(index){
+				timer=setInterval(function(){
+					if(list.offsetLeft>-w){
+						list.style.left=list.offsetLeft-10+"px";	
+						setInterval(function(){
+							lis1[index].style.background="#4998E7";
+							if(index==0){
+								lis1[index].style.backgroundColor="rgba(255,255,255,0.3)";
+								index++;
+							}
+						},2000)
+					}
+					else{
+						console.log(index);	
+						list.style.left=0;
+//						lis1[index].style.backgroundColor="rgba(255,255,255,0.3)";
+//						console.log(lis1[index]+index);
+//						console.log(lis1[index].style.backgroundColor);
+						index=0;
+						lis1[index].style.backgroundColor="#4998E7";
+						lis1[index+1].style.backgroundColor="rgba(255,255,255,0.3)";
+						console.log(lis1[index]+index);
+						console.log(lis1[index].style.backgroundColor);
+						console.log(lis1[index+1]+index+1);
+						console.log(lis1[index+1].style.backgroundColor);
+					}				
+				},200)	
+			}
+			a(index);
+			list.addEventListener("touchstart",function(ev){
+				clearInterval(timer);
+				disx=ev.changedTouches[0].pageX;
+				leftyd=this.offsetLeft;
+			})
+			list.addEventListener("touchmove",function(ev){
+				ux=(ev.changedTouches[0].pageX-disx)+leftyd;
+				if(ux>0){
+					this.style.left="0px";
+				}
+				else if(ux<-w){
+					this.style.left=-w+"px";
+				}
+				else{
+					this.style.left=ux+"px";
+				}	
+			})
+			list.addEventListener("touchend",function(){
+				var n=Math.round(this.offsetLeft/w);
+				console.log(n);
+				this.style.left=n*w+"px";
+				if(n==0){
+					lis1[n].style.background="#4998E7";
+					lis1[n+1].style.background="rgba(255,255,255,0.3)";
+				}
+				else{
+					lis1[n].style.background="#4998E7";
+					lis1[n-1].style.background="rgba(255,255,255,0.3)";
+				}
+				index=n;
+				a(index);
+			})
+		</script>
 	</body>
 </html>
