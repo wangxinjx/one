@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<script src="js/zepto.min.js"></script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			ul{
+				list-style:none;
+				width:100%;
+				height:100%;
+			}
+			li{
+				float:left;
+				overflow:hidden;
+			}
+			#large{
+				width:100%;
+				height:100%;
+				display:none;
+				position:absolute;
+				background:white;
+				top:0;
+				left:0;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="show">
+			
+		</ul>
+		<div id="large">
+			<img src="" alt="" id="largeImage"/>
+		</div>
+		<script>
+			$(function(){
+				var len=16;
+				var s='';
+				var w=$(window).width();
+				var lw=w/4;
+				
+				for(var i=0;i<=15;i++){
+					s+='<li style="width:'+lw+'px;height:'+lw+'px"><canvas id=can'+i+'></canvas></li>';
+					var p=new Image;
+					p.index=i;
+					p.src="img/"+i+".jpg";
+					p.onload=function(){
+						var ogc=$("#can"+this.index)[0].getContext("2d");
+						ogc.drawImage(this,0,0,p.width,p.height);
+					}
+				}
+				$("#show").html(s);
+				$("#show").on("tap","li",function(){
+					$("#large").show();
+					var index=$(this).index();
+					showLargeImg(index);
+				})
+				$("#large").on("tap",function(){
+					$("#large").hide();
+				})
+				function showLargeImg(n){
+					var t=new Image;
+					t.src="img/"+n+".large.jpg";
+					t.onload=function(){
+						$("#largeImage").attr("src",t.src);
+						var tw=this.width;
+						var th=this.height;
+						var ww=$(window).width();
+						var hw=$(window).height();
+						var wx=ww/tw;
+						var hx=hw/th;
+						var cw=tw*wx;
+						var ch=th*hx;
+						if(tw>th){
+							$("#largeImage").css({
+								width:'100%',
+								height:'auto',
+								marginTop:'50%',
+								marginLeft:0
+							})
+						}
+						else{
+							$("#largeImage").css({
+								width:'auto',
+								height:'100%',
+								marginTop:0,
+								marginLeft:0
+							})
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
