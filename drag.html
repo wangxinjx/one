@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="utf-8" />
 		<title></title>
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<script src="js/zepto.min.js"></script>
 		<script>
 			document.documentElement.style.fontSize=innerWidth/16+"px";
 		</script>
@@ -19,28 +20,61 @@
 				padding:0;
 			}
 			div{
-				width:100%;
-				height:300px;
-				position:relative;
+				width:16rem;
+				height:100%;
+				position:relative;overflow: hidden;
 			}
 			ul{
-				width:300%;
-				height:300px;
+				width:400%;
+				height:100%;
 				position:absolute;
 				left:0;top:0;
 			}
-			li{
+			ul li{
 				float:left;
-				width:20rem;
-				height:300px;
+				width:16rem;
+				height:100%;
+				position: relative;
 			}
-			li:nth-child(3n+1){
-				background:#def;
+			ul li img{
+				width:16rem;
+				height:100%;
+				max-width:100%;
+				/*max-height:100%;*/
 			}
-			li:nth-child(3n+2){
-				background:#abcdef;
+			ol{
+				width:7rem;
+				height:2rem;
+				/*background:red;*/
+				position:absolute;
+				bottom:1rem;
+				left:3rem;
+				display: -webkit-box;
+				/*border-radius:0.5rem;*/
+				/*border:1px solid #ccc;*/
+				
 			}
-			li:nth-child(3n){
+			ol li{
+				width:1rem;
+				height:1rem;
+				border-radius:0.5rem;
+				border:1px solid #ccc;
+				list-style: none;
+				position: relative;
+				margin:0.2rem;
+			}
+			ul li #btn{
+				position: absolute;
+				bottom: 25%;
+				padding: 6px;
+				left: 50%;
+				margin-left: -38px;
+				border: 1px solid #ccc;
+				z-index: 5;
+				color: #fff;
+				background: rgba(0, 0, 0,0.5);
+			}
+			.bg{
 				background:#edf;
 			}
 		</style>
@@ -48,47 +82,47 @@
 	<body>
 		<div id="a">
 			<ul id="b">
-				<li>111</li>
-				<li>222</li>
-				<li>333</li>
+				<li><img src="img/1.png" alt="" /></li>
+				<li><img src="img/2.png" alt="" /></li>
+				<li><img src="img/3.png" alt="" /></li>
+				<li><img src="img/4.png" alt="" /> <span id="btn">开始旅行</span></li>
 			</ul>
+			<ol id="con">
+				<li class="bg"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
 		</div>
 		<script>
-			var a=document.getElementById("a");
-			a.addEventListener("touchstart",function(ev){
+			$("#a")[0].addEventListener("touchstart",function(ev){
 				ev.preventDefault();
 			})
-			var b=document.getElementById("b");
-			var lis=document.getElementsByTagName("li");
-			var olen=lis.length;
-			console.log(olen);
-			var disx;
-			var leftyd;
-			var w=lis[0].clientWidth;
-			b.innerHTML+=b.innerHTML;
-			var len=b.children.length;
-			console.log(len);
-			b.style.width=w*len+"px";
-			b.addEventListener("touchstart",function(ev){
-				disx=ev.changedTouches[0].pageX;
-				var n=Math.round(this.offsetLeft/w);
-				if(n==0){
-					num=olen;
-					this.style.left=-num*w+"px";
-				}
-				if(-n==len-1){
-					num=olen-1;
-					this.style.left=-num*w+"px";
-				}
-				leftyd=this.offsetLeft;
-			})
-			b.addEventListener("touchmove",function(ev){
-				this.style.left=(ev.changedTouches[0].pageX-disx)+leftyd+"px";
-			})
-			b.addEventListener("touchend",function(){
-				var n=Math.round(this.offsetLeft/w);
-				console.log(n);
-				this.style.left=n*w+"px";
+			$(function(){	
+				var n=0;
+				var w=$(window).width();
+				console.log(w);
+				var s=$("#b").find("li").size();
+				$("#b").on("swipeLeft",function(){	
+					n++;
+					if(n>=s){
+						n=s-1;
+					}
+					$("#b").css("-webkit-transform","translate3d("+(-n*w)+"px,0,0)");
+					$("#con li").eq(n).addClass("bg").siblings().removeClass("bg");
+					console.log($("#b")[0].offsetLeft);
+				})
+				.on("swipeRight",function(){
+					n--;
+					if(n<0){
+						n=0;
+					}
+					$("#b").css("transform","translate3d("+(-n*w)+"px,0,0)");
+					$("#con li").eq(n).addClass("bg").siblings().removeClass("bg");
+				})
+				$("#btn").on("tap",function(){
+					location.href="http://www.baidu.com";
+				})
 			})
 		</script>
 	</body>
