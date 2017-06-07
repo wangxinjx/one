@@ -1,0 +1,61 @@
+* { -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; }
+
+.container section .oneul li span, .container section .oneul li p, .container section > div:nth-of-type(2) span, .container section .twoul li span:nth-child(2), .container section .twoul li p { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+
+ul { list-style: none; }
+
+html, body, .container { width: 100%; height: 100%; overflow: hidden; }
+
+.container { display: flex; flex-direction: column; overflow: auto; color: white; position: relative; }
+.container header { width: 100%; height: 60px; background: url(../img/headerbg.png) no-repeat; display: flex; align-items: center; position: absolute; top: 0; }
+.container header > img { width: 40%; height: 60%; z-index: 9999; position: absolute; left: 0; top: 10%; max-width: 204px; }
+.container header span { width: 60px; position: absolute; right: 10px; top: 25%; text-align: center; flex: 0.3; height: 40%; background: skyblue; border-radius: 10%; font-size: 16px; }
+.container nav { width: 100%; height: 60px; display: flex; position: absolute; top: 50px; }
+.container nav ul { width: 100%; height: 60px; display: flex; flex-wrap: wrap; background: steelblue; }
+.container nav ul li { font-size: 16px; width: 20%; height: 50%; line-height: 150%; text-align: center; }
+.container .show { width: 100%; height: 7.5rem; overflow: hidden; position: absolute; top: 110px; }
+.container .show .cont { width: 200%; height: 7.5rem; position: absolute; top: 0; left: 0; }
+.container .show .cont > li { float: left; width: 50%; height: 7.5rem; }
+.container .show .cont > li img { width: 100%; height: 7.5rem; max-width: 640px; }
+.container .show > ul:nth-child(2) { width: 10%; height: 0.5rem; position: absolute; right: 0; bottom: 1.5rem; display: flex; flex-direction: row; }
+.container .show > ul:nth-child(2) li { margin: 0 2px; width: 30%; height: 0.5rem; border-radius: 50%; background: rgba(255, 255, 255, 0.3); }
+.container .show > ul:nth-child(2) li.on { background: burlywood; }
+.container section { flex: 1; width: 100%; background: white; color: black; position: absolute; top: 260px; }
+.container section .oneul { width: 100%; flex-direction: row; height: 10rem; margin: 0 0 20px; padding: 0 15px; }
+.container section .oneul li { flex: 1; height: 2rem; font-size: 16px; display: flex; flex-direction: row; align-items: center; position: relative; }
+.container section .oneul li strong { width: 100px; font-size: 16px; color: #4998E7; }
+.container section .oneul li h2 { font-size: 16px; color: #4998E7; padding-right: 10px; }
+.container section .oneul li span { width: 80%; padding-right: 50px; }
+.container section .oneul li p { width: 80%; padding-right: 50px; }
+.container section .oneul li img { width: 20%; height: 30%; position: absolute; top: 20%; right: 1%; max-width: 51px; }
+.container section .oneul li:not(:last-child) { border-bottom: 1px solid #EDEFF0; }
+.container section .onespan { display: block; width: 90%; font-size: 16px; height: 2rem; line-height: 0.5rem; background: #EDF6FF; padding: 20px 20px; position: absolute; left: 15px; border: 1px solid cornflowerblue; color: #4998E7; text-align: center; }
+.container section .onespan div { width: 1rem; height: 1rem; border-radius: 50%; background: #4998E7; color: white; position: absolute; right: 8%; top: 35%; text-align: center; line-height: 1rem; }
+.container section > div:nth-of-type(1) { width: 100%; height: 2rem; position: absolute; top: 15rem; display: flex; background: url(../img/headbg.png) no-repeat top; font-size: 18px; }
+.container section > div:nth-of-type(1) div { width: 20%; height: 100%; background: url(../img/headbg.png) no-repeat bottom; color: #4998E7; text-align: center; }
+.container section > div:nth-of-type(1) div:nth-child(3) { flex: 1; text-align: left; }
+.container section > div:nth-of-type(1) div:nth-child(1) { background: white; color: red; border-top: 2px solid #2A70BE; }
+.container section > div:nth-of-type(1) div:not(:nth-child(1)) { border-top: 2px solid #9AC7ED; }
+.container section > div:nth-of-type(2) { width: 100%; height: 4rem; position: absolute; top: 17rem; display: flex; flex-direction: row; }
+.container section > div:nth-of-type(2) img { width: 30%; height: 80%; position: absolute; top: 0; max-width: 150px; }
+.container section > div:nth-of-type(2) span { width: 70%; padding-right: 10px; position: absolute; right: 0; font-size: 0.8rem; color: #ccc; }
+.container section .twoul { width: 100%; position: absolute; top: 21rem; padding: 0 15px; }
+.container section .twoul li { width: 100%; height: 2rem; display: flex; font-size: 16px; flex-direction: row; }
+.container section .twoul li:nth-child(8) div:nth-child(1) { width: 45px; height: 100%; background: url(../img/flagicon.png) no-repeat 0 0; }
+.container section .twoul li:not(:nth-of-type(1)) div:nth-child(1) { width: 45px; height: 100%; background: url(../img/flagicon.png) no-repeat -144px 0; }
+.container section .twoul li:nth-child(1) div:nth-child(1) { width: 45px; height: 100%; background: url(../img/flagicon.png) no-repeat 0 0; }
+.container section .twoul li span:nth-child(2) { flex-grow: 1; padding-right: 80px; }
+.container section .twoul li p { padding-right: 30px; }
+.container section .twoul li:not(:last-child) { border-bottom: 1px solid #EDEFF0; }
+.container section .twospan { margin: 15px 0; display: block; width: 90%; font-size: 16px; height: 2rem; line-height: 0.5rem; background: #F6F5F5; padding: 20px 20px; position: absolute; top: 36rem; left: 15px; border: 1px solid #999; color: #D2D2D2; text-align: center; }
+.container section .twospan div { width: 1rem; height: 1rem; border-radius: 50%; background: #D2D2D2; color: white; position: absolute; right: 25%; top: 35%; text-align: center; line-height: 1rem; }
+.container > img { width: 18%; height: 15%; position: fixed; bottom: 3.5rem; right: 1rem; max-width: 87px; }
+.container footer { width: 100%; height: 2.5rem; background: rgba(0, 0, 0, 0.5); position: fixed; display: flex; flex-direction: row; bottom: 0; }
+.container footer div { width: 30%; height: 2rem; background: url(../img/02924055.jpg) no-repeat; background-size: 2rem; margin: 5px 10px; }
+.container footer span:nth-of-type(1) { position: absolute; margin: 2px 0; left: 3rem; }
+.container footer span:nth-of-type(1) p:nth-child(1) { font-size: 0.8rem; }
+.container footer span:nth-of-type(1) p:nth-child(2) { font-size: 0.7rem; }
+.container footer span:nth-of-type(2) { font-size: 14px; position: absolute; right: 10%; margin: 5px 10px; display: block; width: 12%; text-align: center; line-height: 2rem; height: 2rem; background: #4998E7; border-radius: 20%; }
+.container footer > p { position: absolute; right: 0; }
+
+/*# sourceMappingURL=index.css.map */
