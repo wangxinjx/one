@@ -4,309 +4,159 @@
 		<meta charset="utf-8" />
 		<title></title>
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-		<link rel="stylesheet" href="css/index.css" />
 		<script src="js/zepto.min.js"></script>
-		<script>
-			document.getElementsByTagName("html")[0].style.fontSize=innerWidth/16+"px";
-		</script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+				box-sizing:border-box;
+			}
+			ul{
+				list-style:none;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+				overflow:hidden;
+			}
+			.container{
+				width:100%;
+				height:100%;
+				display:flex;
+				flex-direction:column;
+			}
+			header,footer{
+				width:100%;
+				height:40px;
+				background:#def;
+			}
+			section{
+				flex:1;
+				background:#edf;
+				overflow:auto;
+			}
+			section ul{
+				width:100%;
+				height:100%;
+			}
+			section  li{
+				width:100%;
+				height:40px;
+				list-style:none;
+			}
+			.preloder{
+				width:100%;
+				height:100px;
+			}
+			.preloder::after{
+				content:"";
+				display:inline-block;
+				width:30px;
+				height:30px;
+				border-radius:50%;
+				border-bottom:2px solid #333;
+				animation:rotate 1s infinite;
+			}
+			@keyframes rotate{
+				from{
+					transform:rotate(0deg);
+				}
+				to{
+					transform:rotate(360deg);
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container">
-			<header>
-				<div class="h-nav">
-					<a href="#"><i class="home"></i>首页</a>
-					<a href="#">面试</a>
-				</div>
-			</header>
-			<div class="banner">
-				<img src="img/banner.png" alt="" />
-			</div>
-			<nav>
-				<ul>
-					<li>
-						<a href="#">
-							<img src="img/jq.png" alt="" />
-							<span>面试技巧</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="img/rh.png" alt="" />
-							<span>面试问题</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="img/js.png" alt="" />
-							<span>面试自我介绍</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="img/wt.png" alt="" />
-							<span>如何面试</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="img/jy.png" alt="" />
-							<span>面试经验</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="img/yy.png" alt="" />
-							<span>英语面试</span>
-						</a>
-					</li>
+			<header></header>
+			<section id="list">
+				<ul id="mul">
+					<li>abc1</li>
+					<li>abc2</li>
+					<li>abc3</li>
+					<li>abc4</li>
+					<li>abc5</li>
+					<li>abc6</li>
+					<li>abc7</li>
+					<li>abc8</li>
+					<li>abc9</li>
+					<li>abc10</li>
+					<li>abc11</li>
+					<li>abc12</li>
+					<li>abc13</li>
+					<li>abc14</li>
+					<li>abc15</li>
+					<li>abc16</li>
+					<li>abc17</li>
+					<li>abc18</li>
+					<li>abc19</li>
+					<li>abc20</li>
+					<li>abc21</li>
+					<li>abc22</li>
+					<li>abc23</li>
+					<li>abc24</li>
+					<li>abc25</li>
+					<li>abc26</li>
+					<li>abc27</li>
+					<li>abc28</li>
+					<li>abc29</li>
+					<li>abc30</li>
 				</ul>
-			</nav>
-			<section>
-				<h3>
-					<i></i>
-					<span>面试分类查询</span>
-				</h3>
-				<ul class="f-sf">
-					<li>
-						<span>面试技巧</span>
-					</li>
-					<li>
-						<a href="#">
-							公务员
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							会计
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							求职
-						</a>
-					</li>
-					<i class="open"></i>
-				</ul>
-				<div class="f-zk">
-					<ul>
-						<li>文员</li>
-						<li>招聘</li>
-						<li>自主招生</li>
-						<li>置业顾问</li>
-						<li>应届生</li>
-						<li>大学生</li>
-						<li>银行</li>
-						<li>教师</li>
-						<li>销售</li>
-						<li>英语</li>
-						<li>事业单位</li>
-						<li>医药代表</li>
-						<li>自我介绍</li>
-						<li>外企</li>
-					</ul>
-				</div>
-				<ul class="f-sf">
-					<li>
-						<span>面试问题</span>
-					</li>
-					<li>
-						<a href="#">
-							及答案
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							银行
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							销售
-						</a>
-					</li>
-					<i class="open"></i>
-				</ul>
-				<div class="f-zk">
-					<ul>
-						<li>教师</li>
-						<li>会计</li>
-						<li>行政助理</li>
-						<li>大全及答</li>
-						<li>公务员</li>
-						<li>学生会</li>
-						<li>外企</li>
-						<li>英语</li>
-						<li>军校</li>
-						<li>村官</li>
-						<li>置业顾问</li>
-						<li>教师资格</li>
-						<li>部门</li>
-					</ul>
-				</div>
-				<ul class="f-sf">
-					<li>
-						<span>面试经验</span>
-					</li>
-					<li>
-						<a href="#">
-							教师
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							公务员
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							中国银行
-						</a>
-					</li>
-					<i class="open"></i>
-				</ul>
-				<div class="f-zk">
-					<ul>
-						<li>农业银行</li>
-						<li>工商银行</li>
-						<li>优衣库</li>
-						<li>中石化</li>
-						<li>中兴</li>
-						<li>华为</li>
-						<li>新东方</li>
-						<li>中国移动</li>
-						<li>交通银行</li>
-						<li>中国人寿</li>
-						<li>公务员</li>
-						<li>建设银行</li>
-						<li>招商银行</li>
-						<li>浦发银行</li>
-					</ul>
-				</div>
-				<ul class="f-sf">
-					<li>
-						<span>英语面试</span>
-					</li>
-					<li>
-						<a href="#">
-							自我介绍
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							口语900
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							常见问题
-						</a>
-					</li>
-					<i class="open"></i>
-				</ul>
-				<div class="f-zk">
-					<ul>
-						<li>英语面试</li>
-						<li>情景对话</li>
-						<li>问题</li>
-						<li>对企面试</li>
-						<li>面试英语</li>
-						<li>问题及回</li>
-						<li>自我介绍</li>
-						<li>常见问题</li>
-						<li>口语对话</li>
-						<li>对话</li>
-						<li>口语</li>
-					</ul>
-				</div>
-				<ul class="f-sf">
-					<li>
-						<span>面试自我</span>
-					</li>
-					<li>
-						<a href="#">
-							银行
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							英语
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							英文
-						</a>
-					</li>
-					<i class="open"></i>
-				</ul>
-				<div class="f-zk">
-					<ul>
-						<li>研究生</li>
-						<li>公务员</li>
-						<li>教师</li>
-						<li>幼师</li>
-						<li>会计</li>
-						<li>求职</li>
-						<li>志愿者</li>
-						<li>大学生</li>
-						<li>幼师</li>
-						<li>学生会</li>
-						<li>特警</li>
-						<li>村官</li>
-						<li>农行</li>
-					</ul>
-				</div>
-				<ul class="f-sf">
-					<li>
-						<span>如何面试</span>
-					</li>
-					<li>
-						<a href="#">
-							克服紧张
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							应对面试
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							如何提问
-						</a>
-					</li>
-					<i class="open"></i>
-				</ul>
-				<div class="f-zk">
-					<ul>
-						<li>如何自我</li>
-						<li>应届毕业生</li>
-						<li>跳槽面试</li>
-						<li>应聘者</li>
-						<li>该如何穿</li>
-						<li>成功面试</li>
-						<li>应届生</li>
-						<li>跳槽原因</li>
-						<li>轻松面试</li>
-						<li>询问结果</li>
-					</ul>
-				</div>
 			</section>
+			<footer></footer>
 		</div>
 		<script>
 			$(function(){
-				var flag=true;
-				$(".f-sf i").on("tap",function(){
-					if(flag==true){
-						$(this).addClass("close");
-						$(this).parent().next("div").addClass("on");
-						flag=false;
+				var ty,sh,dir,flag=false,tdiv,ch,lh;
+				var wh=$("#list").height();
+				console.log(wh);
+				$("#list").on("touchstart",function(ev){
+					ty=ev.touches[0].pageY;
+					sh=$(this).scrollTop();
+					ch=$("mul").children().size()*$("#mul").children().height();
+					lh=$("#list").height();
+				})
+				$("#list").on("touchmove",function(ev){
+					dir=ev.touches[0].pageY-ty;
+					if(dir>0 && sh==0){
+						if(!flag){
+							tdiv=$("<div class='preloder'>loading......</div>").prependTo($(this));
+							flag=true;
+						}
 					}
-					else{
-						$(this).removeClass("close");
-						$(this).parent().next("div").removeClass("on");
-						flag=true;
+					if(dir<0 && ch<=(sh+lh)){
+						if(!flag){
+							tdiv=$("<div class='preloder'>loading......</div>").appendTo($(this));
+							flag=true;
+						}
 					}
+					console.log(sh,wh);
+				})
+				$("#list").on("touchend",function(){
+					if(flag){
+						$.ajax({
+							url:"deom.json",
+							type:'get',
+							dataType:"json",
+							success:function(data){
+								var a=data.list;
+								var str='';
+								for(var i=0;i<a.length;i++){
+									str+="<li>"+a[i].title+"</li>";
+								}
+								var html=$("#mul").html();
+								if(dir>0){
+									$("#mul").html(str+html);
+								}
+								if(dir<0){
+									$("#mul").html(html+str);
+								}
+								$(".preloder").remove();
+								flag=false;
+							}
+						})
+					}	
 				})
 			})
 		</script>
