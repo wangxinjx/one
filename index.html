@@ -2,161 +2,48 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" href="bs/css/bootstrap.css" />
+		<link rel="stylesheet" href="css/index.css" />
 		<script src="js/zepto.min.js"></script>
-		<style>
-			*{
-				margin:0;
-				padding:0;
-				box-sizing:border-box;
-			}
-			ul{
-				list-style:none;
-			}
-			html,body{
-				width:100%;
-				height:100%;
-				overflow:hidden;
-			}
-			.container{
-				width:100%;
-				height:100%;
-				display:flex;
-				flex-direction:column;
-			}
-			header,footer{
-				width:100%;
-				height:40px;
-				background:#def;
-			}
-			section{
-				flex:1;
-				background:#edf;
-				overflow:auto;
-			}
-			section ul{
-				width:100%;
-				height:100%;
-			}
-			section  li{
-				width:100%;
-				height:40px;
-				list-style:none;
-			}
-			.preloder{
-				width:100%;
-				height:100px;
-			}
-			.preloder::after{
-				content:"";
-				display:inline-block;
-				width:30px;
-				height:30px;
-				border-radius:50%;
-				border-bottom:2px solid #333;
-				animation:rotate 1s infinite;
-			}
-			@keyframes rotate{
-				from{
-					transform:rotate(0deg);
-				}
-				to{
-					transform:rotate(360deg);
-				}
-			}
-		</style>
+		<script src="js/jquery-1.11.1.js"></script>
+		<script src="js/h-nav.js"></script>
+		<script>
+			document.getElementsByTagName("html")[0].style.fontSize=innerWidth/16+"px";
+		</script>
+		<title></title>
 	</head>
 	<body>
-		<div class="container">
-			<header></header>
-			<section id="list">
-				<ul id="mul">
-					<li>abc1</li>
-					<li>abc2</li>
-					<li>abc3</li>
-					<li>abc4</li>
-					<li>abc5</li>
-					<li>abc6</li>
-					<li>abc7</li>
-					<li>abc8</li>
-					<li>abc9</li>
-					<li>abc10</li>
-					<li>abc11</li>
-					<li>abc12</li>
-					<li>abc13</li>
-					<li>abc14</li>
-					<li>abc15</li>
-					<li>abc16</li>
-					<li>abc17</li>
-					<li>abc18</li>
-					<li>abc19</li>
-					<li>abc20</li>
-					<li>abc21</li>
-					<li>abc22</li>
-					<li>abc23</li>
-					<li>abc24</li>
-					<li>abc25</li>
-					<li>abc26</li>
-					<li>abc27</li>
-					<li>abc28</li>
-					<li>abc29</li>
-					<li>abc30</li>
-				</ul>
+		<div class="container" id="container">
+			<header>
+				<span class="glyphicon glyphicon-tasks" id="all">
+					<ul class="all-nav">
+						<h2>记一记</h2>
+						<li>全部</li>
+						<li>今天</li>
+						<li>本周</li>
+						<li>上周</li>
+						<li>新增分组</li>
+						<li>修改组名</li>
+					</ul>
+				</span>全部<span>记一记</span><i class="glyphicon glyphicon-search"></i>
+				<span class="h-nav" id="h-nav">...
+						<ul class="h-nav-c">
+							<li>列表</li>
+							<li>缩略图</li>
+							<li>设置密码</li>
+						</ul>
+				<span>
+			</header>
+			<section>
+				
 			</section>
-			<footer></footer>
+			<div class="bj"><i class="glyphicon glyphicon-pencil"></i></div>
 		</div>
 		<script>
 			$(function(){
-				var ty,sh,dir,flag=false,tdiv,ch,lh;
-				var wh=$("#list").height();
-				console.log(wh);
-				$("#list").on("touchstart",function(ev){
-					ty=ev.touches[0].pageY;
-					sh=$(this).scrollTop();
-					ch=$("mul").children().size()*$("#mul").children().height();
-					lh=$("#list").height();
-				})
-				$("#list").on("touchmove",function(ev){
-					dir=ev.touches[0].pageY-ty;
-					if(dir>0 && sh==0){
-						if(!flag){
-							tdiv=$("<div class='preloder'>loading......</div>").prependTo($(this));
-							flag=true;
-						}
-					}
-					if(dir<0 && ch<=(sh+lh)){
-						if(!flag){
-							tdiv=$("<div class='preloder'>loading......</div>").appendTo($(this));
-							flag=true;
-						}
-					}
-					console.log(sh,wh);
-				})
-				$("#list").on("touchend",function(){
-					if(flag){
-						$.ajax({
-							url:"deom.json",
-							type:'get',
-							dataType:"json",
-							success:function(data){
-								var a=data.list;
-								var str='';
-								for(var i=0;i<a.length;i++){
-									str+="<li>"+a[i].title+"</li>";
-								}
-								var html=$("#mul").html();
-								if(dir>0){
-									$("#mul").html(str+html);
-								}
-								if(dir<0){
-									$("#mul").html(html+str);
-								}
-								$(".preloder").remove();
-								flag=false;
-							}
-						})
-					}	
+				$(".bj").on("tap",function(){
+					window.location.href="http://www.baidu.com";
 				})
 			})
 		</script>
