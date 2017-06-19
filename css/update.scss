@@ -31,10 +31,21 @@ $sc:20;
             line-height:35px;
             
         }
-        lable{
-            line-height:35px;
-             margin:0 0 0 210/$sc+rem;
+        div{
+            width:15px;
+            height:15px;
+            @include pos(relative);
+            background:red;
+            margin:10px 0 0 210/$sc+rem;
+            lable{
+                @include pos();
+                top:-5px;
+                left:0;
+                line-height:35px;
+//               margin:0 0 0 210/$sc+rem;
+            }
         }
+        
         span:nth-of-type(1){
             display:inline-block;
             padding:0px 2px 0 3px;    
