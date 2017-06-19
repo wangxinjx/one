@@ -3,15 +3,12 @@
 .container { position: relative; }
 .container header { position: fixed; z-index: 999999; top: 0; width: 100%; height: 40px; background: #9BA6BC; padding: 0 5px; color: #fff; font-size: 16px; }
 .container header i { line-height: 35px; }
-.container header div { width: 15px; height: 15px; position: relative; margin: 10px 0 0 10.5rem; }
-.container header div lable { position: absolute; top: -8px; left: 0; line-height: 35px; }
 .container header span:nth-of-type(1) { display: inline-block; padding: 0px 2px 0 3px; }
-.container header span:nth-of-type(2) { text-align: center; }
-.container header .up-nav { display: inline-block; width: 30px; position: relative; }
-.container header .up-nav ul { position: absolute; top: 40px; left: -50px; width: 70px; height: 120px; background: #9BA6BC; display: none; font-size: 12px; }
+.container header span:nth-of-type(2) { text-align: center; margin: 0 0 0 11.5rem; }
+.container header .up-nav { display: inline-block; width: 30px; text-align: center; position: relative; }
+.container header .up-nav ul { position: absolute; top: 40px; left: -50px; width: 70px; background: #9BA6BC; display: none; font-size: 12px; }
 .container header .up-nav ul li { width: 100%; height: 30px; line-height: 30px; text-align: center; }
-.container section { width: 100%; height: 26.4rem; position: absolute; top: 40px; }
-.container section img { width: 100%; height: 150px; }
-.container section #shuju { z-index: 9999999; display: inline-block; width: 100%; height: 18.9rem; font-size: 16px; border: 0; }
+.container section { width: 100%; height: 100%; position: absolute; top: 40px; }
+.container section #shuju { z-index: 9999999; display: inline-block; width: 100%; height: 100%; font-size: 16px; border: 0; }
 
 /*# sourceMappingURL=update.css.map */

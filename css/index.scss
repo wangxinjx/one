@@ -37,6 +37,7 @@ a{
 html,body{
     @extend %wh;
     overflow:hidden;
+    @include pos(relative);
 }
 .container{
     @extend %wh;
@@ -99,8 +100,10 @@ html,body{
             display:inline-block;
             width:30px;
             @include pos(relative);
+//          z-index:99999;
             ul{
                 @include pos();
+                z-index:99999;
                 top:30px;
                 left:-50px;
                 width:70px;
@@ -116,6 +119,18 @@ html,body{
                 }
             }
         }
+    }
+    section{
+        background:#FBFBFB;
+    }
+    #sj{
+        @include pos();
+        top:40px;
+        z-index:-1;
+        width:100%;
+        height:100%;
+        background:#FBFBFB;
+        overflow:auto;
     }
     .bj{
         width:50px;

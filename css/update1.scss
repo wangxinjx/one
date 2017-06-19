@@ -32,6 +32,20 @@ $sc:20;
             line-height:35px;
             
         }
+//      div{
+//          width:15px;
+//          height:15px;
+//          @include pos(relative);
+//          margin:10px 0 0 210/$sc+rem;
+//          lable{
+//              @include pos();
+//              top:-8px;
+//              left:0;
+//              line-height:35px;
+//             margin:0 0 0 210/$sc+rem;
+//          }
+//      }
+        
         span:nth-of-type(1){
             display:inline-block;
             padding:0px 2px 0 3px;    
@@ -51,6 +65,7 @@ $sc:20;
                 top:40px;
                 left:-50px;
                 width:70px;
+                height:120px;
                 background:#9BA6BC;
                 display:none;
                 font-size:12px;
@@ -71,6 +86,8 @@ $sc:20;
         #shuju{
             z-index:9999999;
             display:inline-block;
+//          @include pos();
+//          top:0px;
             width:100%;
             height:100%;
             font-size:16px;

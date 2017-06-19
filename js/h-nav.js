@@ -9,7 +9,6 @@ $(function(){
 			flag=true;
 		}
 		if(!fl){
-			console.log($(".all-nav"));
 			$(".all-nav").animate({"left":"-110px"},500);
 			fl=true;
 		}

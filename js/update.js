@@ -22,7 +22,6 @@ $(function(){
 	$("#tc").on("tap",function(){
 		window.location.href="index.html";
 	})
-	var selectedFile = $('#myimg1').get(0).files[0];
-	console.log($('input[type="file"]'));
+	
 	
 })

@@ -15,12 +15,13 @@ $sc:20;
 @mixin pos($p:absolute){
     position:$p;
 }
-.container{
+.container1{
     @extend %wh;
-    @include pos(relative);
+    @include pos(absolute);
+    top:-3000px;
+    
     header{
         @include pos(fixed);
-         z-index:999999;
         top:0;
         width:100%;
         height:40px;
@@ -28,29 +29,49 @@ $sc:20;
         padding:0 5px;
         color:#fff;
         font-size:16px;
+        line-height:35px;
         i{
             line-height:35px;
             
         }
+        div{
+            width:15px;
+            height:15px;
+            @include pos();
+            top:10px;
+            left:230/$sc+rem;
+            lable{
+                @include pos();
+                top:-8px;
+                left:0;
+                line-height:35px;
+            }
+        }
+        
         span:nth-of-type(1){
             display:inline-block;
             padding:0px 2px 0 3px;    
         }
         span:nth-of-type(2){
             text-align:center;
-            margin:0 0 0 230/$sc+rem;
+            @include pos();
+                top:1px;
+                right:45/$sc+rem;
+                display:inline-block;
         }
         .up-nav{ 
+           @include pos();
+                top:1px;
+                right:0/$sc+rem;
             display:inline-block;
             width:30px;
-            text-align:center;
-            @include pos(relative);
             ul{
                
                 @include pos();
                 top:40px;
                 left:-50px;
                 width:70px;
+                height:120px;
                 background:#9BA6BC;
                 display:none;
                 font-size:12px;
@@ -65,14 +86,20 @@ $sc:20;
     }
     section{
         width:100%;
-        height:100%;
+        height:528/$sc+rem;
         @include pos();
         top:40px;
+        img{
+            width:100%;
+            height:150px;
+        }
         #shuju{
             z-index:9999999;
             display:inline-block;
+//          @include pos();
+//          top:0px;
             width:100%;
-            height:100%;
+            height:378/$sc+rem;
             font-size:16px;
             border:0;
         }

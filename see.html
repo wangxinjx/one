@@ -41,28 +41,26 @@
 			})
 		</script>
 		<style>
-			.file{
+			/*.{
 				position:absolute;
 				width:0px;
 				height:15px;
 				top:0px;
 				right:50px;
-			}
+			}*/
 		</style>
 		
 	</head>
 	<body>
 		<div class="container" id="container">
 			<header>
-				<span id="tc"><</span>新增
+				<span id="tc"><</span>查看详情
 					<!--<div><lable class="glyphicon glyphicon-picture"></lable><input type="file" class="file" id="myimg1"/></div>-->
 				<span id="xz">√</span>
 				<span class="up-nav" id="up-nav">|
 						<ul class="up-nav-c">
-							<li>分享</li>
-							<li>提醒</li>
-							<li>颜色</li>
-							<li>字体大小</li>
+							<li>删除</li>
+							
 						</ul>
 				</span>
 			</header>
@@ -71,26 +69,26 @@
 			</section>
 		</div>
 		<script>
-			var myimg=document.getElementById("myimg1");
-			var shuju=document.getElementById("shuju");
-			var show=document.getElementById("show");
-			var xz=document.getElementById("xz");
-			var storage=window.localStorage;
-			xz.onclick=function(){
-				if(shuju.value!=""){
-					if(storage.c){
-						storage.c+="<br/>"+shuju.value;
-					}
-					else{
-						storage.c=shuju.value;
-					}
-					window.location.href="index.html";
-					shuju.value="";
-				}
-				else{
-					window.location.href="index.html";
-				}
-			}
+//			var myimg=document.getElementById("myimg1");
+//			var shuju=document.getElementById("shuju");
+//			var show=document.getElementById("show");
+//			var xz=document.getElementById("xz");
+//			var storage=window.localStorage;
+//			xz.onclick=function(){
+//				if(shuju.value!=""){
+//					if(storage.c){
+//						storage.c+="<br/>"+shuju.value;
+//					}
+//					else{
+//						storage.c=shuju.value;
+//					}
+//					window.location.href="index.html";
+//					shuju.value="";
+//				}
+//				else{
+//					window.location.href="index.html";
+//				}
+//			}
 			
 		</script>
 	</body>

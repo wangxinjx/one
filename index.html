@@ -10,8 +10,39 @@
 		<script src="js/h-nav.js"></script>
 		<script>
 			document.getElementsByTagName("html")[0].style.fontSize=innerWidth/16+"px";
+		
 		</script>
 		<title></title>
+		<style>
+			a{
+				width:100%;
+				height:50px;
+				display:inline-block;
+				margin:0 0 5px;
+				background:#fff;
+				z-index:999;
+			}
+			p{
+				padding:10px;
+				line-height:30px;
+				margin:0 0 5px;
+				background:#fff;
+				font-size:16px;
+				z-index:999;
+			}
+			p:nth-of-type(2n+1){
+				border-left:3px solid orangered;
+			}
+			p:nth-of-type(2n){
+				border-left:3px solid royalblue;
+			}
+			.a{
+				/*position:absolute;
+				top:200px;
+				left:0;*/
+				z-index:999999999999;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container" id="container">
@@ -27,7 +58,7 @@
 						<li>修改组名</li>
 					</ul>
 				</span>全部<span>记一记</span><i class="glyphicon glyphicon-search"></i>
-				<span class="h-nav" id="h-nav">...
+				<span class="h-nav" id="h-nav">|
 						<ul class="h-nav-c">
 							<li>列表</li>
 							<li>缩略图</li>
@@ -36,14 +67,45 @@
 				<span>
 			</header>
 			<section>
-				<div id="sj"></div>
+				<div id="sj">
+
+				</div>
 			</section>
 			<div class="bj"><i class="glyphicon glyphicon-pencil"></i></div>
 		</div>
 		<script>
+			var storage=window.localStorage;
+			var c="";
+			var sj=document.getElementById("sj");
+			var arr=[];
+			window.onload=function(){
+				c=storage.c;
+				arr=c.split("<br/>");
+				console.log(arr.length);
+				for(var i=0;i<arr.length;i++){
+//					var link=document.createElement("a");
+//					link.href="see.html";
+//					sj.appendChild(link);
+					var	p=document.createElement("p");
+					p.innerHTML=arr[i];
+					sj.appendChild(p);
+				}
+			}
+			console.log(sj.children);
+			var t=sj.children;
+			t.onclick=function(){
+				console.log(t);
+			}
+		</script>
+		<script>
 			$(function(){
 				$(".bj").on("tap",function(){
 					window.location.href="update.html";
+				})
+console.log($("#sj").find("p"));
+				$("#sj").on("tap",'p',function(){
+					window.location.href="update.html";
+					console.log($(this).html());
 				})
 			})
 		</script>
