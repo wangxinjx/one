@@ -107,10 +107,10 @@ html,body{
             }
         }
         span:nth-of-type(2){
-//          width:230/$sc+rem;
+            margin:0 0 0 90/$sc+rem;
             text-align:center;
-            @include pos();
-            left:45%;
+//          @include pos();
+//          left:45%;
         }
         .h-nav{
             display:inline-block;
