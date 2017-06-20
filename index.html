@@ -15,12 +15,25 @@
 		<title></title>
 		<style>
 			#lb li{
-				padding:10px;
-				line-height:30px;
+				line-height:40px;
 				margin:0 0 5px;
 				background:#fff;
-				font-size:16px;
+				font-size:14px;
 				z-index:999;
+				position:relative;
+				
+			}
+			#lb li p{
+				width:100%;
+				display:flex;
+				flex-wrap:wrap;
+			}
+			#lb li p span{
+				font-size:12px;
+				position:absolute;
+				bottom:-13px;
+				right:0;
+				color:#ccc;
 			}
 			#lb li:nth-of-type(2n+1){
 				border-left:3px solid orangered;
@@ -34,15 +47,18 @@
 		<div class="container" id="container">
 			<header>
 				<span class="glyphicon glyphicon-tasks" id="all">
-					<ul class="all-nav">
-						<h2>记一记</h2>
-						<li>全部</li>
-						<li>今天</li>
-						<li>本周</li>
-						<li>上周</li>
-						<li>新增分组</li>
-						<li>修改组名</li>
-					</ul>
+					<div class="zz" id="zz">
+						<ul class="all-nav">
+							<h2>记一记</h2>
+							<li>全部</li>
+							<li>今天</li>
+							<li>本周</li>
+							<li>上周</li>
+							<li>新增分组</li>
+							<li>修改组名</li>
+						</ul>
+					</div>
+					
 				</span>全部<span>记一记</span><i class="glyphicon glyphicon-search"></i>
 				<span class="h-nav" id="h-nav">|
 						<ul class="h-nav-c">
@@ -64,7 +80,6 @@
 			$(function(){
 				$(".bj").on("tap",function(){
 					window.location.href="update.html";
-					console.log("1");
 				})
 			})
 		</script>	

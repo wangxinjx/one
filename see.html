@@ -41,7 +41,16 @@
 		</script>
 		<style>
 			p{
+				width:100%;
 				padding:20px 0 0 20px;
+				position:relative;
+			}
+			p span{
+				position:absolute;
+				bottom:-13px;
+				font-size:12px;
+				right:10px;
+				color:#ccc;
 			}
 		</style>
 		
@@ -49,8 +58,8 @@
 	<body>
 		<div class="container" id="container">
 			<header>
-				<span id="tc"><</span>查看详情
-				<span id="xz">√</span>
+				<span id="tc" class="glyphicon glyphicon-chevron-left"></span>查看详情
+				<span id="xz" class="glyphicon glyphicon-ok"></span>
 				<span class="up-nav" id="up-nav">|
 						<ul class="up-nav-c">
 							<li id="de">删除</li>
@@ -64,20 +73,29 @@
 		<script>
 			var de=document.getElementById("de");
 			var storage=window.localStorage;
-			var d=storage.d;
+			var e=storage.e;
+			var f="";
 			var c="";
 			var show=document.getElementById("show");
 			var arr=[];
+			var arr2=[];
 			c=storage.c;
+			f=storage.f;
 			arr=c.split("<br/>");
-			console.log(arr);
+			arr2=f.split("<br/>");
+			console.log(f);
 			var	p=document.createElement("p");
-			p.innerHTML=arr[d];
+			var	s=document.createElement("span");
+			p.innerHTML=arr[e];
+			s.innerHTML=arr2[e];
 			show.appendChild(p);
+			p.appendChild(s);
 			de.onclick=function(){
-				arr.splice(d,1);
-				console.log(arr);
+				arr.splice(e,1);
+				arr2.splice(e,1);
+				console.log(arr2);
 				storage.c=arr.join("<br/>");
+				storage.f=arr2.join("<br/>");
 				window.location.href="index.html";
 			}
 		</script>

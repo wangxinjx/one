@@ -34,11 +34,13 @@ $sc:20;
         }
         span:nth-of-type(1){
             display:inline-block;
-            padding:0px 2px 0 3px;    
+            padding:0px 2px 0 3px; 
+            margin:15px 0 0;  
+            line-height:10px; 
         }
         span:nth-of-type(2){
             text-align:center;
-            margin:0 0 0 210/$sc+rem;
+            margin:10px 0 0 210/$sc+rem;
         }
         .up-nav{ 
             display:inline-block;

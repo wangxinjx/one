@@ -51,9 +51,8 @@
 	<body>
 		<div class="container" id="container">
 			<header>
-				<span id="tc"><</span>新增
-					<!--<div><lable class="glyphicon glyphicon-picture"></lable><input type="file" class="file" id="myimg1"/></div>-->
-				<span id="xz">√</span>
+				<span id="tc" class="glyphicon glyphicon-chevron-left"></span>新增
+				<span id="xz" class="glyphicon glyphicon-ok"></span>
 				<span class="up-nav" id="up-nav">|
 						<ul class="up-nav-c">
 							<li>分享</li>
@@ -80,6 +79,14 @@
 					}
 					else{
 						storage.c=shuju.value;
+					}
+					if(!storage.f){
+						var day=new Date();
+						storage.f=day.getFullYear()+"年"+(day.getMonth()+1)+"月"+day.getDate()+"日";
+					}
+					else{
+						var day=new Date();
+						storage.f+="<br/>"+day.getFullYear()+"年"+(day.getMonth()+1)+"月"+day.getDate()+"日";
 					}
 					window.location.href="index.html";
 					shuju.value="";
