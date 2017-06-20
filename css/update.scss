@@ -40,10 +40,10 @@ $sc:20;
         }
         span:nth-of-type(2){
             text-align:center;
-//          margin:10px 0 0 210/$sc+rem;
-            @include pos();
-            right:-20px;  
-            top:12px;
+            margin:10px 0 0 290/$sc+rem;
+//          @include pos();
+//          right:-20px;  
+//          top:12px;
         }
         .up-nav{ 
             display:inline-block;
