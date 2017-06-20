@@ -13,9 +13,10 @@ html, body { overflow: hidden; position: relative; }
 .container header i { width: 40px; margin: 10px 0; line-height: 20px; position: absolute; right: 30px; }
 .container header span:nth-of-type(1) { display: inline-block; padding: 13px 2px 0 3px; position: relative; }
 .container header span:nth-of-type(1) .zz { position: absolute; top: 0px; left: -5px; margin: 0; padding: 0; width: 16rem; height: 28.4rem; background: rgba(0, 0, 0, 0.3); display: none; }
-.container header span:nth-of-type(1) .zz .all-nav { z-index: 99999; position: fixed; top: 0px; left: -110px; width: 100px; height: 28.4rem; background: #9BA6BC; font-size: 12px; transition: all 1s; padding: 20px 0 0; }
-.container header span:nth-of-type(1) .zz .all-nav h2 { width: 100%; height: 30px; line-height: 30px; text-align: center; }
+.container header span:nth-of-type(1) .zz .all-nav { z-index: 99999; position: fixed; top: 0px; left: -110px; width: 100px; height: 28.4rem; background: #9BA6BC; font-size: 12px; transition: all 1s; }
+.container header span:nth-of-type(1) .zz .all-nav h2 { width: 100%; height: 40px; line-height: 40px; text-align: center; }
 .container header span:nth-of-type(1) .zz .all-nav li { width: 100%; height: 30px; line-height: 30px; text-align: center; background: #9BA6BC; }
+.container header span:nth-of-type(1) .zz .all-nav li:nth-of-type(1) { background: #A6AFC0; }
 .container header span:nth-of-type(1) .zz .all-nav li:nth-of-type(4) { margin: 0 0 11.5rem; border-bottom: 1px solid #A3ABBE; }
 .container header span:nth-of-type(2) { margin: 0 0 0 4.5rem; text-align: center; }
 .container header .h-nav { display: inline-block; width: 30px; position: absolute; right: 0; margin: 0 0 0 5px; text-align: center; }

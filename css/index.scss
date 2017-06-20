@@ -85,11 +85,10 @@ html,body{
                     background:#9BA6BC;
                     font-size:12px;
                     transition:all 1s;
-                    padding:20px 0 0;
                     h2{
-                         width:100%;
-                        height:30px;
-                        line-height:30px;
+                        width:100%;
+                        height:40px;
+                        line-height:40px;
                         text-align:center;
                     }
                     li{
@@ -98,6 +97,9 @@ html,body{
                         line-height:30px;
                         text-align:center;
                         background:#9BA6BC;
+                    }
+                    li:nth-of-type(1){
+                        background:#A6AFC0;
                     }
                     li:nth-of-type(4){
                         margin:0 0 230/$sc+rem;

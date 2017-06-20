@@ -20,7 +20,7 @@ $sc:20;
     @include pos(relative);
     header{
         @include pos(fixed);
-         z-index:999999;
+        z-index:999999;
         top:0;
         width:100%;
         height:40px;
