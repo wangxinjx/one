@@ -29,8 +29,7 @@ $sc:20;
         color:#fff;
         font-size:16px;
         i{
-            line-height:35px;
-            
+            line-height:35px; 
         }
         span:nth-of-type(1){
             display:inline-block;
@@ -40,7 +39,7 @@ $sc:20;
         }
         span:nth-of-type(2){
             text-align:center;
-            margin:10px 0 0 230/$sc+rem;
+            margin:10px 0 0 210/$sc+rem;
         }
         .up-nav{ 
             display:inline-block;
