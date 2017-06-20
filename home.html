@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" href="bs/css/bootstrap.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/home.css" />
+		<script src="js/zepto.min.js"></script>
+		<script src="js/jquery-1.11.1.js"></script>
+		<script src="js/h-nav.js"></script>
+		<script>
+			document.getElementsByTagName("html")[0].style.fontSize=innerWidth/16+"px";
+		
+		</script>
+		
+		<style>
+			.file{
+				position:absolute;
+				width:0px;
+				height:15px;
+				top:0px;
+				right:50px;
+			}
+			.container{
+				z-index:1;
+			}
+		</style>
+		<title></title>
+	</head>
+	<body>
+		<div class="container" id="container">
+			<header>
+				<span class="glyphicon glyphicon-tasks" id="all">
+					<ul class="all-nav">
+						<h2>记一记</h2>
+						<li>全部</li>
+						<li>今天</li>
+						<li>本周</li>
+						<li>上周</li>
+						<li>新增分组</li>
+						<li>修改组名</li>
+					</ul>
+				</span>全部<span>记一记</span><i class="glyphicon glyphicon-search"></i>
+				<span class="h-nav" id="h-nav">...
+						<ul class="h-nav-c">
+							<li>列表</li>
+							<li>缩略图</li>
+							<li>设置密码</li>
+						</ul>
+				<span>
+			</header>
+			<section>
+				<div id="sj">
+					
+				</div>
+			</section>
+			<div class="bj"><i class="glyphicon glyphicon-pencil"></i></div>
+		</div>
+		<div class="container1" id="container1">
+			<header>
+				<span id="tc"><</span>新增<div><lable class="glyphicon glyphicon-picture"></lable><input type="file" class="file" id="myimg1"/></div>
+				<span id="xz">√</span>
+				<span class="up-nav" id="up-nav">|
+						<ul class="up-nav-c">
+							<li>分享</li>
+							<li>提醒</li>
+							<li>颜色</li>
+							<li>字体大小</li>
+						</ul>
+				</span>
+			</header>
+			<section id="show">
+				<textarea id="shuju"></textarea>
+			</section>
+		</div>
+		<script>
+			var myimg=document.getElementById("myimg1");
+			var shuju=document.getElementById("shuju");
+			var show=document.getElementById("show");
+			var img=document.createElement("img");
+			var i;
+			myimg.onchange=function(){
+				var fr=new FileReader;
+//				console.log(fr);
+				fr.readAsDataURL(this.files[0]);
+				fr.onload=function(){
+					img.src=this.result;
+					i=this.result;
+//					console.log(img);
+					show.appendChild(img);
+					show.insertBefore(img,shuju);
+//					console.log(show);
+					
+				}
+				shuju.style.marginTop="-4px";
+//				console.log(shuju.style.marginTop);
+			}
+		</script>
+		<script>
+			$(function(){
+				$(".bj").on("tap",function(){
+					$("#container1").css("top","0");
+					$("#container1 header").css("zIndex","9999");
+					$("#container1").css("zIndex","999");
+				})
+			})
+		</script>
+		<script>
+			$(function(){
+				var flag=true;
+				var main=document.querySelector("#container1");
+				var up_nav=document.querySelector("#up-nav");
+				var fl=true;
+				var arr=[];
+				var i=0;
+				var storage = window.localStorage;
+				for (var i=0, len = storage.length; i < len; i++){ 
+					var key = storage.key(i);
+					var value = storage.getItem(key); 
+					console.log(key + "=" + value); 
+				}
+				main.addEventListener("touchend",function(){
+					if(!flag){
+						$(".up-nav-c").hide();	
+						flag=true;
+					}
+				})
+				$(".up-nav").on("tap",function(){
+					if(flag){
+						$(".up-nav-c").show();
+						flag=false;
+					}
+					else{
+						$(".up-nav-c").hide();
+						flag=true;
+					}
+				})
+				function wz(){
+					$("#container1").css("top","-3000px");
+					$("#container1 header").css("zIndex","-1");
+					$("#container1").css("zIndex","-1");
+				}
+				$("#tc").on("tap",function(){
+					wz();
+				})
+				$("#xz").on("tap",function(){
+					wz();
+					console.log($("#show").find("img").length);
+					arr[i++]=$("#shuju").val();
+					if($("#show").find("img").length>0){
+						var img=$("#show").find("img").attr("src");
+						var str="<img src='"+img+"'>";
+						
+						$("#sj").prepend(str);
+						
+						
+						
+//						$("<p>"+$("#shuju").val()+"</p>").appendTo($("#sj"));
+						$("#show").find("img").length==0;
+					}
+//					else{
+////						$("<p>"+$("#shuju").val()+"</p>").prependTo($("#sj"));
+//						for(var j=0;j<arr.length;j++){
+//							$("#sj").append($("<p>"+arr[j]+"</p>"));
+//							console.log(arr[j]);
+//						}
+////						$("#sj").append(arr);
+//					}
+					for(var j=0;j<arr.length;j++){
+					$("#sj").append($("<p>"+arr[j]+"</p>"));
+							console.log(arr[j]);
+				}
+					$("#shuju").val("");
+				})
+				
+			})
+		</script>
+	</body>
+</html>

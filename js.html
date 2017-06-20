@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-1.11.1.js"></script>
+	<script>
+		$(function(){
+			$("#btn").click(function(){
+				if($("#text").val()!=""){
+					$.post("user.php",{val:$("#text").val()},function(data){
+						if(data==$("#text").val()){
+							$("#show").html($("#text").val()+",你好！");
+						}
+						else{
+							alert("用户名不存在");
+						}
+					})
+				}
+			})		
+		})
+	</script>
+</head>
+<body>
+	<div id="show">
+		<input type="text" id="text"/><br/>
+		<button id="btn">登录</button>
+	</div>
+</body>
+</html>
