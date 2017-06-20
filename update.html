@@ -9,14 +9,13 @@
 		<link rel="stylesheet" href="css/update.css" />
 		<script src="js/jquery-1.11.1.js"></script>
 		<script src="js/zepto.min.js"></script>
-		<!--<script src="js/update.js"></script>-->
 		<script>
 			$(function(){
 				var flag=true;
 				var main=document.querySelector("#container");
 				var up_nav=document.querySelector("#up-nav");
 				var fl=true;
-				main.addEventListener("touchend",function(){
+				$("section").on("tap",function(){
 					if(!flag){
 						$(".up-nav-c").hide();	
 						flag=true;

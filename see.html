@@ -18,7 +18,7 @@
 				var main=document.querySelector("#container");
 				var up_nav=document.querySelector("#up-nav");
 				var fl=true;
-				main.addEventListener("touchend",function(){
+				$("section").on("tap",function(){
 					if(!flag){
 						$(".up-nav-c").hide();	
 						flag=true;

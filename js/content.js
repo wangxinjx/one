@@ -23,13 +23,11 @@ $(function(){
 				lis.appendChild(p);
 				p.appendChild(s);
 			}
-		 $("#lb li").each(function(index){
-					$("#lb li").on("click",function(){
-							window.location.href="see.html";
-							console.log($(this).index());
-							storage.e=$(this).index();
-					})
+		 	$("#lb li").each(function(index){
+				$("#lb li").on("click",function(){
+					window.location.href="see.html";
+					console.log($(this).index());
+					storage.e=$(this).index();
 				})
-	
-		
+			})	
 })

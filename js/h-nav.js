@@ -4,12 +4,6 @@ $(function(){
 	var zz=document.querySelector("#zz");
 	var h_nav=document.querySelector("#h-nav");
 	var fl=true;
-//	$("section").on("tap",function(){
-//		if(!flag){
-//			$(".h-nav-c").hide();	
-//			flag=true;
-//		}
-//	})
 	$(".h-nav").on("tap",function(){
 		if(flag){
 			$(".h-nav-c").show();

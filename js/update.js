@@ -3,13 +3,13 @@ $(function(){
 	var main=document.querySelector("#container");
 	var up_nav=document.querySelector("#up-nav");
 	var fl=true;
-	main.addEventListener("touchend",function(){
-		if(!flag){
-			$(".up-nav-c").hide();	
-			flag=true;
-		}
-	})
-	$(".up-nav").on("tap",function(){
+//	main.addEventListener("touchend",function(){
+//		if(!flag){
+//			$(".up-nav-c").hide();	
+//			flag=true;
+//		}
+//	})
+	$(".up-nav").on("touchstart",function(){
 		if(flag){
 			$(".up-nav-c").show();
 			flag=false;
