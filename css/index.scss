@@ -55,9 +55,11 @@ html,body{
         font-size:16px;
         z-index:99999999999;
         i{
-            width:30px;
+            width:40px;
             margin:10px 0;
-            line-height:20px;   
+            line-height:20px; 
+            @include pos();
+            right:30px;  
         }
         span:nth-of-type(1){
             display:inline-block;
@@ -105,13 +107,14 @@ html,body{
             }
         }
         span:nth-of-type(2){
-            flex:1;
+            width:230/$sc+rem;
             text-align:center;
         }
         .h-nav{
             display:inline-block;
             width:30px;
-            @include pos(relative);
+            @include pos();
+            right:0;
             margin:0 0 0 5px;
             text-align:center;
             ul{
