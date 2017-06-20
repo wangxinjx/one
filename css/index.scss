@@ -142,7 +142,7 @@ html,body{
         }
     }
     section{
-        background:#FBFBFB;
+        background:#FBFBFB;padding:0 0 30px;
     }
     #sj{
         @include pos();
@@ -152,6 +152,10 @@ html,body{
         height:100%;
         background:#FBFBFB;
         overflow:auto;
+        
+        #lb{
+            margin:0 0 80px;
+        }
     }
     .bj{
         width:50px;
