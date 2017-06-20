@@ -4,13 +4,13 @@ $(function(){
 	var zz=document.querySelector("#zz");
 	var h_nav=document.querySelector("#h-nav");
 	var fl=true;
-	main.addEventListener("touchend",function(){
+	$("section").on("tap",function(){
 		if(!flag){
 			$(".h-nav-c").hide();	
 			flag=true;
 		}
 	})
-	$(".h-nav").on("tap",function(){
+	$(".h-nav").on("touchstart",function(){
 		if(flag){
 			$(".h-nav-c").show();
 			flag=false;
@@ -27,13 +27,12 @@ $(function(){
 			fl=false;
 		}
 	})
-	zz.addEventListener("touchend",function(){
-		console.log("1");
+	$("#zz").on("tap",function(){
 		if(!fl){	
-			$(".all-nav").animate({"left":"-110px"},500,function(){
+			$(".all-nav").animate({"left":"-150px"},100,function(){
 				$(".zz").hide();
+				fl=true;
 			});
-			fl=true;
 		}
 	})
 })
