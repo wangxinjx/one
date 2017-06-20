@@ -53,7 +53,6 @@
 				color:#ccc;
 			}
 		</style>
-		
 	</head>
 	<body>
 		<div class="container" id="container">
@@ -67,10 +66,10 @@
 				</span>
 			</header>
 			<section id="show">
-				
 			</section>
 		</div>
 		<script>
+		$(function(){
 			var de=document.getElementById("de");
 			var storage=window.localStorage;
 			var e=storage.e;
@@ -90,14 +89,16 @@
 			s.innerHTML=arr2[e];
 			show.appendChild(p);
 			p.appendChild(s);
-			de.onclick=function(){
+			$("#de").on("tap",function(){
 				arr.splice(e,1);
 				arr2.splice(e,1);
 				console.log(arr2);
 				storage.c=arr.join("<br/>");
 				storage.f=arr2.join("<br/>");
 				window.location.href="index.html";
-			}
+			})
+		})
+			
 		</script>
 	</body>
 </html>
